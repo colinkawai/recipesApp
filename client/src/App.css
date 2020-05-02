@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url(./fonts/Lato-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-thin";
+  src: local("Lato"), url(./fonts/Lato-Light.ttf) format("truetype");
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+.logOut {
+  background-color: #fff0f0;
+  color: gray;
+  border: 1px solid gray;
+}
+.auth {
+  margin-left: auto;
+  margin-right: 70px;
+  margin-top: 20px;
+}
+.titleContainer {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.title {
+  font-size: 70px;
+  font-family: Lato;
+  background-color: #e5e5d8;
+  padding: 10px;
+  margin: 3px;
+}
+.titleHeader {
+  font-size: 20px;
+  font-family: Lato-thin;
+  padding: 10px;
+  background-color: #e5e5d8;
+}
+.containerTwo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff6347;
+}
+
+.addTitleWithList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  width: 60%;
+  min-width: 500px;
+  background-color: #ff9582;
+}
+.formInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 51%;
+  font-family: Lato-thin;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.formInput {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  max-height: 70px;
+  width: 51%;
+}
+form {
+  padding-top: 10px;
+  width: 100%;
+}
+input {
+  flex: 1;
+  width: 88%;
+  font-family: Lato-thin;
+  font-size: 20px;
+  padding: 12px 20px;
+  border: 1px;
+  border-radius: 4px;
+}
+#logNotice {
+  font-family: Lato-thin;
+  font-size: 17px;
+  flex: 1;
+}
+
+.formButton {
+  flex: 1;
+  font-family: Lato-thin;
+  width: 10%;
+  padding: 12px 10px;
+  margin-left: 1px;
+  border: 2px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.repListContainer {
+  display: flex;
+  flex-direction: column;
+  width: 51%;
+  font-family: Lato-thin;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.buttonsContainerSecond {
+  display: flex;
+  width: 80%;
+}
+
+.repListItem,
+#repButtonOverride {
+  flex: 1;
+  display: flex;
+  display: block;
+  color: black;
+  background-color: #fffff0;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100% !important;
+  margin: 5px;
+}
+
+.cancel,
+#cancelButtonOverride {
+  background-color: red;
+  margin-left: 30px;
+  margin-right: auto;
+  border-color: lightgray;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.gg-chevron-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 2));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  padding-bottom: 50px;
+  color: black;
+  cursor: pointer;
+}
+
+.gg-chevron-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+
+  left: 4px;
+  top: 2px;
+}
