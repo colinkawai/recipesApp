@@ -74,7 +74,10 @@ class MainPage extends Component {
   getUserInfo() {
     if (this.state.useremail !== "")
       axios
-        .get("/api/getData/" + this.state.useremail)
+        .get(
+          "https://fathomless-headland-87238.herokuapp.com/api/getData/" +
+            this.state.useremail
+        )
         .then((res) => {
           this.setState({ userReps: res.data });
         })
@@ -117,7 +120,10 @@ class MainPage extends Component {
       mode: "cors",
       cache: "default",
     };
-    fetch("/api/v1/auth/google", options).then((r) => {
+    fetch(
+      "https://fathomless-headland-87238.herokuapp.com/api/v1/auth/google",
+      options
+    ).then((r) => {
       const token = r.headers.get("x-auth-token");
       r.json().then((user) => {
         if (token) {
@@ -143,7 +149,7 @@ class MainPage extends Component {
 
   addLink = (titleLink) => {
     axios
-      .post("/api/putData", {
+      .post("https://fathomless-headland-87238.herokuapp.com/api/putData", {
         ingredients: titleLink,
         useremail: this.state.useremail,
       })
