@@ -74,7 +74,7 @@ class MainPage extends Component {
   getUserInfo() {
     if (this.state.useremail !== "")
       axios
-        .get("http://localhost:4000/api/getData/" + this.state.useremail)
+        .get("/api/getData/" + this.state.useremail)
         .then((res) => {
           this.setState({ userReps: res.data });
         })
@@ -97,7 +97,7 @@ class MainPage extends Component {
 
   deleteRep = (useremail, title) => {
     axios
-      .delete("http://localhost:4000/api/deleteData/" + useremail + "/" + title)
+      .delete("/api/deleteData/" + useremail + "/" + title)
       .then((res) => {
         if (res.data) {
           this.getUserInfo();
@@ -117,7 +117,7 @@ class MainPage extends Component {
       mode: "cors",
       cache: "default",
     };
-    fetch("http://localhost:4000/api/v1/auth/google", options).then((r) => {
+    fetch("/api/v1/auth/google", options).then((r) => {
       const token = r.headers.get("x-auth-token");
       r.json().then((user) => {
         if (token) {
@@ -143,7 +143,7 @@ class MainPage extends Component {
 
   addLink = (titleLink) => {
     axios
-      .post("http://localhost:4000/api/putData", {
+      .post("/api/putData", {
         ingredients: titleLink,
         useremail: this.state.useremail,
       })
