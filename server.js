@@ -1,6 +1,7 @@
 var app = require("./app");
 var debug = require("debug")("recipesApp:server");
 var http = require("http");
+var express = require("express");
 
 var port = normalizePort(process.env.PORT || "4000");
 app.set("port", port);
