@@ -17,24 +17,6 @@ var http = require("http");
 //app.use(cors());
 const router = express.Router();
 
-//const mongodb =
-//("mongodb+srv://Colin_Kawai:Twinturbo123@cluster0-p8ar4.mongodb.net/recipe?retryWrites=true");
-// connects our back end code with the database
-//mongoose.connect(mongodb, { useNewUrlParser: true });
-
-//let db = mongoose.connection;
-
-//db.once("open", () => console.log("connected to the database recipe"));
-
-// checks if connection with the database is successful
-//db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
-// (optional) only made for logging and
-// bodyParser, parses the request body to be a readable json format
-//app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.json());
-//app.use(logger("dev"));
-
 router.get("/", function (req, res) {
   res.send("Hello World");
 });
